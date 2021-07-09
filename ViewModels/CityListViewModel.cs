@@ -45,7 +45,11 @@ namespace AvaloniaTest.ViewModels
             _cityCache.AddOrUpdate(cities);
 
             // This is to pre-fill the selection with a default to test the combobox
-            SelectedCountry = new Country { CountryId = 3, Name = "The Netherlands" };
+            SelectedCountry = countries.First(); 
+            
+            /* Original code:
+             * SelectedCountry = new Country { CountryId = 3, Name = "The Netherlands" };
+             * The ComboBox is bound to Countries, but here a new instance is assigned which is not part of the list */
 
             //Search logic
             Func<City, bool> cityFilter(Country country) => city =>
