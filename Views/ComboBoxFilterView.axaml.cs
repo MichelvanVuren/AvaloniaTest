@@ -5,9 +5,9 @@ using AvaloniaTest.Models;
 
 namespace AvaloniaTest.Views
 {
-    public class CityListView : UserControl
+    public class ComboBoxFilterView : UserControl
     {
-        public CityListView()
+        public ComboBoxFilterView()
         {
             InitializeComponent();
         }

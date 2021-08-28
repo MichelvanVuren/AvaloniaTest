@@ -8,6 +8,13 @@
         Width="800" Height="500"
         x:Class="AvaloniaTest.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
-        Title="AvaloniaTest"
-        Content="{Binding List}">
+        Title="AvaloniaTest">
+  <TabControl>
+    <TabItem Header="ComboBox">
+      <views:ComboBoxFilterView DataContext="{Binding ComboBoxFilterViewModel}"/>
+    </TabItem>
+    <TabItem Header="DataGrid">
+      <views:DataGridEditingView DataContext="{Binding DataGridEditingViewModel}"/>
+    </TabItem>
+  </TabControl>
 </Window>

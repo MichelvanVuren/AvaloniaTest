@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:AvaloniaTest.ViewModels;assembly=AvaloniaTest"
              mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="450"
-             x:Class="AvaloniaTest.Views.CityListView">
+             x:Class="AvaloniaTest.Views.ComboBoxFilterView">
   <DockPanel>
     <Grid RowDefinitions="Auto,Auto">
       <ComboBox x:Name="countryComboBox" Grid.Row="0" Items="{Binding Countries}" SelectedItem="{Binding SelectedCountry, Mode=TwoWay}" HorizontalAlignment="Stretch">

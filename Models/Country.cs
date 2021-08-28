@@ -1,4 +1,6 @@
-﻿namespace AvaloniaTest.Models
+﻿#nullable disable
+
+namespace AvaloniaTest.Models
 {
     public class Country
     {

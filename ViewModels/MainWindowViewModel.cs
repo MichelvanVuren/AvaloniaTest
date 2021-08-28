@@ -7,9 +7,12 @@ namespace AvaloniaTest.ViewModels
     {
         public MainWindowViewModel(Database db)
         {
-            List = new CityListViewModel(Database.GetCountries(), Database.GetCities());
+            ComboBoxFilterViewModel = new ComboBoxFilterViewModel(Database.GetCountries(), Database.GetCities());
+            DataGridEditingViewModel = new DataGridEditingViewModel(Database.GetCountries());
         }
 
-        public CityListViewModel List { get; }
+        public ComboBoxFilterViewModel ComboBoxFilterViewModel { get; }
+
+        public DataGridEditingViewModel DataGridEditingViewModel { get; }
     }
 }

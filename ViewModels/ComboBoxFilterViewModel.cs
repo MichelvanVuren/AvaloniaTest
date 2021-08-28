@@ -12,7 +12,7 @@ using System.Reactive.Linq;
 
 namespace AvaloniaTest.ViewModels
 {
-    public class CityListViewModel : ViewModelBase
+    public class ComboBoxFilterViewModel : ViewModelBase
     {
         private Country _selectedCountry;
         public Country SelectedCountry
@@ -33,7 +33,7 @@ namespace AvaloniaTest.ViewModels
         private readonly IDisposable _countryCleanUp;
         private readonly IDisposable _cityCleanUp;
 
-        public CityListViewModel(IEnumerable<Country> countries, IEnumerable<City> cities)
+        public ComboBoxFilterViewModel(IEnumerable<Country> countries, IEnumerable<City> cities)
         {
             _countryCache.AddOrUpdate(countries);
 
