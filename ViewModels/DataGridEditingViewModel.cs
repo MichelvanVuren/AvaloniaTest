@@ -77,8 +77,8 @@ namespace AvaloniaTest.ViewModels
             {
                 if (SelectedCountry != null && Input != null)
                 {
-                    SelectedCountry.Name = Input;
-                    _countryCache.AddOrUpdate(SelectedCountry);
+                    var editedSelectedCountry = new Country() { CountryId = SelectedCountry.CountryId, Name = Input };
+                    _countryCache.AddOrUpdate(editedSelectedCountry);
                     Input = null;
                 }
             });
