@@ -44,13 +44,10 @@ namespace AvaloniaTest.ViewModels
 
             _cityCache.AddOrUpdate(cities);
 
-            // This is to pre-fill the selection with a default to test the combobox
-            SelectedCountry = countries.FirstOrDefault(c => c.CountryId == 3);
-
             //Search logic
             Func<City, bool> cityFilter(Country country) => city =>
             {
-                return country == null || city.CountryId == SelectedCountry.CountryId;
+                return country == null || SelectedCountry == null || city.CountryId == SelectedCountry.CountryId;
             };
 
             var filterPredicate = this.WhenAnyValue(x => x.SelectedCountry)
