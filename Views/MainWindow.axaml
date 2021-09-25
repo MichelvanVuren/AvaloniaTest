@@ -16,5 +16,8 @@
     <TabItem Header="DataGrid">
       <views:DataGridEditingView DataContext="{Binding DataGridEditingViewModel}"/>
     </TabItem>
+    <TabItem Header="TreeView">
+      <views:TreeViewView DataContext="{Binding TreeViewViewModel}"/>
+    </TabItem>
   </TabControl>
 </Window>
